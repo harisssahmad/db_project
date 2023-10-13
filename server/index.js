@@ -3,6 +3,10 @@ app = express(),
 bodyparser = require('body-parser');
 require('express-async-errors')
 
+const cors = require('cors');
+
+// Enable all CORS requests
+app.use(cors());
 
 const db = require('./db'),
 employeeRoutes = require('./controllers/employee.controller')
